@@ -1,0 +1,15 @@
+name: 'Dispatch ms-deploy trigger'
+description: Action that triggers documentation deploy at ms-deploy
+inputs:
+  token:
+    description: GitHub token
+    required: true
+  repo:
+    description: Repository name
+    required: true
+  branch:
+    description: Branch to deploy docs from
+    required: true
+runs:
+  using: 'node16'
+  main: 'lib/index.js'
